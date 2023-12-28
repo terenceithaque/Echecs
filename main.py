@@ -22,7 +22,7 @@ def quitter_jeu():
         running = False # Alors on arrête le jeu
 
 
-terrain = Terrain(window, 800, 600, [(0, 0,0), (127, 127, 127)])        
+terrain = Terrain(window, 800, 600, [(212, 29, 57), (127, 127, 127)])        
 
 
 while running: # Tant que le jeu est en cours d'exécution

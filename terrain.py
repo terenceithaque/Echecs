@@ -8,10 +8,11 @@ class Terrain():
         self.hauteur = hauteur # Hauteur maximale du terrain
         self.couleurs = couleurs # Couleurs pour chaque carré du terrain
         self.liste_carres = [] # Liste pour représenter tous les carrés dessinés
-        for i in range(10):
-            carre = Carre(self.liste_carres, couleur=self.couleurs[1])
-            carre.draw(screen)
-            self.liste_carres.append(carre)
+        for i in range(20):
+            for couleur in self.couleurs:
+                carre = Carre(self.liste_carres, couleur=couleur)
+                carre.draw(screen)
+                self.liste_carres.append(carre)
     
 
 
