@@ -1,6 +1,7 @@
 # Script principal du jeu
 import pygame
 from tkinter import messagebox
+from terrain import *
 
 pygame.init() # Démarrer le module pygame
 
@@ -21,9 +22,18 @@ def quitter_jeu():
         running = False # Alors on arrête le jeu
 
 
+terrain = Terrain(window, 800, 600, [(0, 0,0), (127, 127, 127)])        
+
 
 while running: # Tant que le jeu est en cours d'exécution
     for evenement in pygame.event.get(): # Pour chaque évènement intercepté pendant l'exécution de la boucle de jeu
         if evenement.type == pygame.QUIT: # Si le joueur désire quitter le jeu
             quitter_jeu()
+
+
+    pygame.display.flip()
+
+
+
+
 
