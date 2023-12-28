@@ -26,8 +26,11 @@ terrain = Terrain(window, 800, 600, [(212, 29, 57), (127, 127, 127)])
 
 
 while running: # Tant que le jeu est en cours d'exécution
+
+    touches = pygame.key.get_pressed() # Obtenir toutes les touches pressées par le joueur
+
     for evenement in pygame.event.get(): # Pour chaque évènement intercepté pendant l'exécution de la boucle de jeu
-        if evenement.type == pygame.QUIT: # Si le joueur désire quitter le jeu
+        if evenement.type == pygame.QUIT or touches[pygame.K_ESCAPE]: # Si le joueur désire quitter le jeu
             quitter_jeu()
 
 
